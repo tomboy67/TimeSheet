@@ -194,16 +194,66 @@
                                                         </mask>
                                                     </variation>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhF-V3-nye">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="6bp-fT-Usb"/>
+                                                        <constraint firstAttribute="width" constant="34" id="Etf-b8-6ST"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="6bp-fT-Usb"/>
+                                                            <exclude reference="Etf-b8-6ST"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="6bp-fT-Usb"/>
+                                                            <include reference="Etf-b8-6ST"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8O8-PD-noB">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="kyA-Bb-8rZ"/>
+                                                        <constraint firstAttribute="width" constant="34" id="pcR-za-SMF"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="kyA-Bb-8rZ"/>
+                                                            <exclude reference="pcR-za-SMF"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="kyA-Bb-8rZ"/>
+                                                            <include reference="pcR-za-SMF"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="EhF-V3-nye" firstAttribute="top" secondItem="tua-BF-4DV" secondAttribute="topMargin" constant="-6" id="3H1-ID-mJJ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="EhF-V3-nye" secondAttribute="trailing" constant="8" id="3bv-rL-qdB"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="EhF-V3-nye" secondAttribute="bottom" constant="-7" id="8lO-fO-CRO"/>
                                                 <constraint firstItem="4OI-MS-GXq" firstAttribute="leading" secondItem="uPc-3l-Y3x" secondAttribute="trailing" constant="7" id="A8N-E7-xKI"/>
                                                 <constraint firstItem="SFS-PP-8Sb" firstAttribute="top" secondItem="tua-BF-4DV" secondAttribute="topMargin" constant="-7" id="Crw-gc-71I"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="xoD-vB-R1B" secondAttribute="bottom" constant="-7" id="Fsp-aq-nIM"/>
                                                 <constraint firstItem="4OI-MS-GXq" firstAttribute="top" secondItem="tua-BF-4DV" secondAttribute="topMargin" constant="-8" id="IEE-jl-uil"/>
+                                                <constraint firstItem="EhF-V3-nye" firstAttribute="leading" secondItem="8O8-PD-noB" secondAttribute="trailing" constant="16" id="Rqb-PX-cDT"/>
                                                 <constraint firstItem="uPc-3l-Y3x" firstAttribute="leading" secondItem="tua-BF-4DV" secondAttribute="leadingMargin" constant="8" id="Tse-hy-oWe"/>
+                                                <constraint firstItem="8O8-PD-noB" firstAttribute="top" secondItem="tua-BF-4DV" secondAttribute="topMargin" constant="-7" id="VK4-1W-EI1"/>
                                                 <constraint firstItem="xoD-vB-R1B" firstAttribute="top" secondItem="tua-BF-4DV" secondAttribute="topMargin" constant="-6" id="YTc-pE-G1Z"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="uPc-3l-Y3x" secondAttribute="bottom" constant="-8" id="eT5-Ir-VZ5"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="4OI-MS-GXq" secondAttribute="bottom" constant="-7" id="gnB-Gb-e2b"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="8O8-PD-noB" secondAttribute="bottom" constant="-6" id="kV1-dt-EZP"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="SFS-PP-8Sb" secondAttribute="bottom" constant="-6" id="qYW-8e-XXb"/>
                                                 <constraint firstItem="SFS-PP-8Sb" firstAttribute="leading" secondItem="xoD-vB-R1B" secondAttribute="trailing" constant="8" id="sRk-bT-bhO"/>
                                                 <constraint firstItem="xoD-vB-R1B" firstAttribute="leading" secondItem="4OI-MS-GXq" secondAttribute="trailing" constant="8" id="ujJ-yb-JGo"/>
@@ -215,6 +265,8 @@
                                                     <exclude reference="4OI-MS-GXq"/>
                                                     <exclude reference="xoD-vB-R1B"/>
                                                     <exclude reference="SFS-PP-8Sb"/>
+                                                    <exclude reference="EhF-V3-nye"/>
+                                                    <exclude reference="8O8-PD-noB"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <exclude reference="Tse-hy-oWe"/>
@@ -229,6 +281,12 @@
                                                     <exclude reference="Crw-gc-71I"/>
                                                     <exclude reference="qYW-8e-XXb"/>
                                                     <exclude reference="sRk-bT-bhO"/>
+                                                    <exclude reference="VK4-1W-EI1"/>
+                                                    <exclude reference="kV1-dt-EZP"/>
+                                                    <exclude reference="3H1-ID-mJJ"/>
+                                                    <exclude reference="3bv-rL-qdB"/>
+                                                    <exclude reference="8lO-fO-CRO"/>
+                                                    <exclude reference="Rqb-PX-cDT"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
@@ -237,6 +295,8 @@
                                                     <include reference="4OI-MS-GXq"/>
                                                     <include reference="xoD-vB-R1B"/>
                                                     <include reference="SFS-PP-8Sb"/>
+                                                    <include reference="EhF-V3-nye"/>
+                                                    <include reference="8O8-PD-noB"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <include reference="Tse-hy-oWe"/>
@@ -251,13 +311,21 @@
                                                     <include reference="Crw-gc-71I"/>
                                                     <include reference="qYW-8e-XXb"/>
                                                     <include reference="sRk-bT-bhO"/>
+                                                    <include reference="VK4-1W-EI1"/>
+                                                    <include reference="kV1-dt-EZP"/>
+                                                    <include reference="3H1-ID-mJJ"/>
+                                                    <include reference="3bv-rL-qdB"/>
+                                                    <include reference="8lO-fO-CRO"/>
+                                                    <include reference="Rqb-PX-cDT"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="dayLabel" destination="uPc-3l-Y3x" id="lv6-QY-N7y"/>
                                             <outlet property="endTimeLabel" destination="SFS-PP-8Sb" id="Urx-kH-Bfb"/>
+                                            <outlet property="overtimeLabel" destination="EhF-V3-nye" id="217-wP-fuf"/>
                                             <outlet property="startTimeLabel" destination="xoD-vB-R1B" id="PYa-Zb-RgT"/>
+                                            <outlet property="totalTimeLabel" destination="8O8-PD-noB" id="dC9-OR-xfk"/>
                                             <outlet property="wdayLabel" destination="4OI-MS-GXq" id="sIw-Wb-gup"/>
                                         </connections>
                                     </tableViewCell>
