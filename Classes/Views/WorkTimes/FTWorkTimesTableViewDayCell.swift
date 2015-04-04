@@ -12,6 +12,8 @@ class FTWorkTimesTableViewDayCell: UITableViewCell {
 
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var wdayLabel: UILabel!
+    @IBOutlet weak var startTimeLabel: UILabel!
+    @IBOutlet weak var endTimeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
