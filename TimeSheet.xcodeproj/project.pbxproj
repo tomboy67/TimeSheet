@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		A335080F1ACFB8CA00B2212A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A335080E1ACFB8CA00B2212A /* AppDelegate.swift */; };
 		A33508121ACFB8CA00B2212A /* TimeSheet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A33508101ACFB8CA00B2212A /* TimeSheet.xcdatamodeld */; };
-		A33508141ACFB8CA00B2212A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33508131ACFB8CA00B2212A /* ViewController.swift */; };
-		A33508171ACFB8CB00B2212A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33508151ACFB8CA00B2212A /* Main.storyboard */; };
 		A33508191ACFB8CB00B2212A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A33508181ACFB8CB00B2212A /* Images.xcassets */; };
 		A335081C1ACFB8CB00B2212A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A335081A1ACFB8CB00B2212A /* LaunchScreen.xib */; };
 		A33508281ACFB8CB00B2212A /* TimeSheetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33508271ACFB8CB00B2212A /* TimeSheetTests.swift */; };
+		A3B146351ACFC74200BAD8F0 /* Dashboards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3B146341ACFC74200BAD8F0 /* Dashboards.storyboard */; };
+		A3B146371ACFC8A100BAD8F0 /* FTDashboardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B146361ACFC8A100BAD8F0 /* FTDashboardsViewController.swift */; };
+		A3B1463A1ACFC90600BAD8F0 /* FTTopNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B146391ACFC90600BAD8F0 /* FTTopNavigationController.swift */; };
+		A3B1463D1ACFD22200BAD8F0 /* FTWorkTimesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B1463C1ACFD22200BAD8F0 /* FTWorkTimesViewController.swift */; };
+		A3B146401ACFD88600BAD8F0 /* FTWorkTimesTableViewDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B1463F1ACFD88600BAD8F0 /* FTWorkTimesTableViewDayCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +34,16 @@
 		A335080D1ACFB8CA00B2212A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A335080E1ACFB8CA00B2212A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A33508111ACFB8CA00B2212A /* TimeSheet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TimeSheet.xcdatamodel; sourceTree = "<group>"; };
-		A33508131ACFB8CA00B2212A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A33508161ACFB8CA00B2212A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A33508181ACFB8CB00B2212A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A335081B1ACFB8CB00B2212A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A33508211ACFB8CB00B2212A /* TimeSheetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeSheetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33508261ACFB8CB00B2212A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A33508271ACFB8CB00B2212A /* TimeSheetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSheetTests.swift; sourceTree = "<group>"; };
+		A3B146341ACFC74200BAD8F0 /* Dashboards.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Dashboards.storyboard; path = Views/Dashboards/Dashboards.storyboard; sourceTree = "<group>"; };
+		A3B146361ACFC8A100BAD8F0 /* FTDashboardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDashboardsViewController.swift; sourceTree = "<group>"; };
+		A3B146391ACFC90600BAD8F0 /* FTTopNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTTopNavigationController.swift; sourceTree = "<group>"; };
+		A3B1463C1ACFD22200BAD8F0 /* FTWorkTimesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTWorkTimesViewController.swift; sourceTree = "<group>"; };
+		A3B1463F1ACFD88600BAD8F0 /* FTWorkTimesTableViewDayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTWorkTimesTableViewDayCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +85,8 @@
 		A335080B1ACFB8CA00B2212A /* TimeSheet */ = {
 			isa = PBXGroup;
 			children = (
+				A3B1462C1ACFC6EC00BAD8F0 /* Classes */,
 				A335080E1ACFB8CA00B2212A /* AppDelegate.swift */,
-				A33508131ACFB8CA00B2212A /* ViewController.swift */,
-				A33508151ACFB8CA00B2212A /* Main.storyboard */,
 				A33508181ACFB8CB00B2212A /* Images.xcassets */,
 				A335081A1ACFB8CB00B2212A /* LaunchScreen.xib */,
 				A33508101ACFB8CA00B2212A /* TimeSheet.xcdatamodeld */,
@@ -113,6 +118,76 @@
 				A33508261ACFB8CB00B2212A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3B1462C1ACFC6EC00BAD8F0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A3B146321ACFC72E00BAD8F0 /* Views */,
+				A3B1462D1ACFC70000BAD8F0 /* Controllers */,
+			);
+			name = Classes;
+			path = ../Classes;
+			sourceTree = "<group>";
+		};
+		A3B1462D1ACFC70000BAD8F0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A3B1463B1ACFD1D800BAD8F0 /* WorkTimes */,
+				A3B146381ACFC8D600BAD8F0 /* Shared */,
+				A3B1462E1ACFC71500BAD8F0 /* Dashboards */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A3B1462E1ACFC71500BAD8F0 /* Dashboards */ = {
+			isa = PBXGroup;
+			children = (
+				A3B146361ACFC8A100BAD8F0 /* FTDashboardsViewController.swift */,
+			);
+			path = Dashboards;
+			sourceTree = "<group>";
+		};
+		A3B146321ACFC72E00BAD8F0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A3B1463E1ACFD7D300BAD8F0 /* WorkTimes */,
+				A3B146331ACFC73400BAD8F0 /* Dashboards */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A3B146331ACFC73400BAD8F0 /* Dashboards */ = {
+			isa = PBXGroup;
+			children = (
+				A3B146341ACFC74200BAD8F0 /* Dashboards.storyboard */,
+			);
+			name = Dashboards;
+			sourceTree = "<group>";
+		};
+		A3B146381ACFC8D600BAD8F0 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A3B146391ACFC90600BAD8F0 /* FTTopNavigationController.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		A3B1463B1ACFD1D800BAD8F0 /* WorkTimes */ = {
+			isa = PBXGroup;
+			children = (
+				A3B1463C1ACFD22200BAD8F0 /* FTWorkTimesViewController.swift */,
+			);
+			path = WorkTimes;
+			sourceTree = "<group>";
+		};
+		A3B1463E1ACFD7D300BAD8F0 /* WorkTimes */ = {
+			isa = PBXGroup;
+			children = (
+				A3B1463F1ACFD88600BAD8F0 /* FTWorkTimesTableViewDayCell.swift */,
+			);
+			name = WorkTimes;
+			path = Views/WorkTimes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +234,7 @@
 		A33508011ACFB8CA00B2212A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = FT;
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = TomomuraRyota;
 				TargetAttributes = {
@@ -195,8 +271,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A33508171ACFB8CB00B2212A /* Main.storyboard in Resources */,
 				A335081C1ACFB8CB00B2212A /* LaunchScreen.xib in Resources */,
+				A3B146351ACFC74200BAD8F0 /* Dashboards.storyboard in Resources */,
 				A33508191ACFB8CB00B2212A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,9 +291,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A33508141ACFB8CA00B2212A /* ViewController.swift in Sources */,
+				A3B146401ACFD88600BAD8F0 /* FTWorkTimesTableViewDayCell.swift in Sources */,
 				A33508121ACFB8CA00B2212A /* TimeSheet.xcdatamodeld in Sources */,
 				A335080F1ACFB8CA00B2212A /* AppDelegate.swift in Sources */,
+				A3B1463D1ACFD22200BAD8F0 /* FTWorkTimesViewController.swift in Sources */,
+				A3B146371ACFC8A100BAD8F0 /* FTDashboardsViewController.swift in Sources */,
+				A3B1463A1ACFC90600BAD8F0 /* FTTopNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,14 +319,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A33508151ACFB8CA00B2212A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A33508161ACFB8CA00B2212A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A335081A1ACFB8CB00B2212A /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -345,6 +416,7 @@
 				INFOPLIST_FILE = TimeSheet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -355,6 +427,7 @@
 				INFOPLIST_FILE = TimeSheet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -411,6 +484,7 @@
 				A335082D1ACFB8CB00B2212A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A335082E1ACFB8CB00B2212A /* Build configuration list for PBXNativeTarget "TimeSheetTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +493,7 @@
 				A33508301ACFB8CB00B2212A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
