@@ -56,6 +56,7 @@ class FTWorkTimesViewController: UIViewController, UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         self.daysOfMonthRange = self.currentCalendar.rangeOfUnit(NSCalendarUnit.DayCalendarUnit,
             inUnit: NSCalendarUnit.MonthCalendarUnit,
             forDate: self.targetDate)
@@ -84,7 +85,7 @@ class FTWorkTimesViewController: UIViewController, UITableViewDataSource, UITabl
         
         cell.dayLabel.textColor = weekday(date).color()
         cell.wdayLabel.textColor = weekday(date).color()
-                
+        
         return cell;
     }
     

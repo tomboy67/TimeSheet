@@ -10,29 +10,40 @@ import UIKit
 
 class FTDashboardsViewController: UIViewController {
     
+    @IBOutlet weak var secondsLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var startTimeButton: DKCircleButton!
     @IBOutlet weak var endTimeButton: DKCircleButton!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "タイムカード"
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        NSTimer.bk_scheduledTimerWithTimeInterval(1,
+            block: { (timer) -> Void in
+                self.updateTimeLabel()
+                self.updateSecondsLabel()
+            },
+            repeats: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
-    */
-
+    
+    func updateTimeLabel() {
+        let now = NSDate()
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        self.timeLabel.text = dateFormatter.stringFromDate(now)
+    }
+    
+    func updateSecondsLabel() {
+        let now = NSDate()
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "ss"
+        self.secondsLabel.text = dateFormatter.stringFromDate(now)
+    }
 }

@@ -3,6 +3,7 @@
 
 target 'TimeSheet' do
   pod 'DKCircleButton'
+  pod 'BlocksKit'
 end
 
 target 'TimeSheetTests' do
