@@ -15,6 +15,8 @@ class FTDashboardsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "タイムカード"
     }
 
     override func didReceiveMemoryWarning() {
