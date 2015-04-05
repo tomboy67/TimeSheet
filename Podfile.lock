@@ -1,10 +1,10 @@
 PODS:
-  - PBFlatUI (1.1.0)
+  - DKCircleButton (1.1)
 
 DEPENDENCIES:
-  - PBFlatUI (~> 1.1.0)
+  - DKCircleButton
 
 SPEC CHECKSUMS:
-  PBFlatUI: d797c6de1d28245287d695d74178dc75895d0bd9
+  DKCircleButton: 62564c9debae08ad77dabb8d9658dfeb5520f2c4
 
 COCOAPODS: 0.36.3

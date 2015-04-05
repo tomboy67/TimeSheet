@@ -9,11 +9,12 @@
 import UIKit
 
 class FTDashboardsViewController: UIViewController {
+    
+    @IBOutlet weak var startTimeButton: DKCircleButton!
+    @IBOutlet weak var endTimeButton: DKCircleButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

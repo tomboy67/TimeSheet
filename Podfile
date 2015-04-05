@@ -2,7 +2,7 @@
 # platform :ios, '6.0'
 
 target 'TimeSheet' do
-  pod 'PBFlatUI',  '~> 1.1.0'
+  pod 'DKCircleButton'
 end
 
 target 'TimeSheetTests' do
