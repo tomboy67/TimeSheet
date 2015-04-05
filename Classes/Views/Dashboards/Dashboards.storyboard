@@ -84,24 +84,35 @@
                                             </mask>
                                         </variation>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18:22" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="df5-zK-uYD">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" red="0.72699652777777779" green="0.72699652777777779" blue="0.72699652777777779" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="df5-zK-uYD" firstAttribute="top" secondItem="vwZ-17-KfS" secondAttribute="top" constant="76" id="2J2-aq-Z9h"/>
                                     <constraint firstAttribute="bottom" secondItem="GGy-nN-rP6" secondAttribute="bottom" constant="20" id="5fB-cD-WXp"/>
                                     <constraint firstItem="NeI-cz-Ax2" firstAttribute="leading" secondItem="vwZ-17-KfS" secondAttribute="leading" constant="30" id="Q09-f0-A5e"/>
                                     <constraint firstAttribute="bottom" secondItem="NeI-cz-Ax2" secondAttribute="bottom" constant="20" id="RBd-Jk-yHl"/>
                                     <constraint firstAttribute="trailing" secondItem="GGy-nN-rP6" secondAttribute="trailing" constant="30" id="UdA-QK-hgy"/>
                                     <constraint firstAttribute="height" constant="200" id="cvM-Wy-kD7"/>
+                                    <constraint firstAttribute="centerX" secondItem="df5-zK-uYD" secondAttribute="centerX" id="yeF-Vf-vEb"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="NeI-cz-Ax2"/>
                                         <exclude reference="GGy-nN-rP6"/>
+                                        <exclude reference="df5-zK-uYD"/>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="cvM-Wy-kD7"/>
                                         <exclude reference="Q09-f0-A5e"/>
                                         <exclude reference="RBd-Jk-yHl"/>
+                                        <exclude reference="2J2-aq-Z9h"/>
+                                        <exclude reference="yeF-Vf-vEb"/>
                                         <exclude reference="5fB-cD-WXp"/>
                                         <exclude reference="UdA-QK-hgy"/>
                                     </mask>
@@ -110,11 +121,14 @@
                                     <mask key="subviews">
                                         <include reference="NeI-cz-Ax2"/>
                                         <include reference="GGy-nN-rP6"/>
+                                        <include reference="df5-zK-uYD"/>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="cvM-Wy-kD7"/>
                                         <include reference="Q09-f0-A5e"/>
                                         <include reference="RBd-Jk-yHl"/>
+                                        <include reference="2J2-aq-Z9h"/>
+                                        <include reference="yeF-Vf-vEb"/>
                                         <include reference="5fB-cD-WXp"/>
                                         <include reference="UdA-QK-hgy"/>
                                     </mask>
@@ -326,18 +340,12 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="278" y="2" width="34" height="21"/>
-                                                    </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8O8-PD-noB">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="236" y="2" width="34" height="21"/>
-                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
