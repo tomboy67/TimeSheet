@@ -15,13 +15,18 @@ PODS:
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
   - DKCircleButton (1.1)
+  - MagicalRecord (2.2):
+    - MagicalRecord/Core (= 2.2)
+  - MagicalRecord/Core (2.2)
 
 DEPENDENCIES:
   - BlocksKit
   - DKCircleButton
+  - MagicalRecord
 
 SPEC CHECKSUMS:
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   DKCircleButton: 62564c9debae08ad77dabb8d9658dfeb5520f2c4
+  MagicalRecord: f8a56bb87ab6552f20c4bb8681a1958a197ea3cd
 
 COCOAPODS: 0.36.3

@@ -46,4 +46,33 @@ class FTDashboardsViewController: UIViewController {
         dateFormatter.dateFormat = "ss"
         self.secondsLabel.text = dateFormatter.stringFromDate(now)
     }
+    
+    @IBAction func onClickStartTime(sender: AnyObject) {
+        MagicalRecord.saveWithBlock({ (localContext) -> Void in
+            let workTime = WorkTime.findOrCreateByTargetDate(NSDate(), context: localContext)
+            workTime.startTime = NSDate().roundDateToFlooringMinutes(15)
+
+            }, completion: { (result, error) -> Void in
+                if (error != nil) {
+                    println("error")
+                } else {
+                    println("success");
+                }
+        })
+    }
+    
+    @IBAction func onClickEndTime(sender: AnyObject) {
+        MagicalRecord.saveWithBlock({ (localContext) -> Void in
+            let workTime = WorkTime.findOrCreateByTargetDate(NSDate(), context: localContext)
+            workTime.endTime = NSDate().roundDateToFlooringMinutes(15)
+            
+            }, completion: { (result, error) -> Void in
+                if (error != nil) {
+                    println("error")
+                } else {
+                    println("success");
+                }
+        })
+    }
+    
 }

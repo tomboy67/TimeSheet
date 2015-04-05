@@ -4,6 +4,7 @@
 target 'TimeSheet' do
   pod 'DKCircleButton'
   pod 'BlocksKit'
+  pod 'MagicalRecord'
 end
 
 target 'TimeSheetTests' do

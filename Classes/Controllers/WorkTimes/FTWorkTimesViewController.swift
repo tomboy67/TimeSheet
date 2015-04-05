@@ -76,7 +76,33 @@ class FTWorkTimesViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as FTWorkTimesTableViewDayCell;
+        
+        self.cellConfigure(cell, indexPath: indexPath)
+
+        
+        return cell;
+    }
+    
+    func cellConfigure(cell: FTWorkTimesTableViewDayCell, indexPath: NSIndexPath) {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        
         let date = self.convertFromIndexPath(indexPath)
+        let predicate : NSPredicate? = NSPredicate(format: "(targetDate >= %@ ) and (targetDate < %@)", date.beginningOfDay(), date.endOfDay())
+        let workTime = WorkTime.MR_findFirstWithPredicate(predicate) as WorkTime?
+        
+        if (workTime?.startTime != nil){
+            cell.startTimeLabel.text = dateFormatter.stringFromDate(workTime!.startTime!)
+        } else {
+            cell.startTimeLabel.text = nil
+        }
+        
+        if (workTime?.endTime != nil) {
+            cell.endTimeLabel.text = dateFormatter.stringFromDate(workTime!.endTime!)
+        } else {
+            cell.endTimeLabel.text = nil
+        }
+        
         let day = indexPath.row + 1
         let dayHuman = NSString(format: "%02d", day)
         
@@ -85,8 +111,6 @@ class FTWorkTimesViewController: UIViewController, UITableViewDataSource, UITabl
         
         cell.dayLabel.textColor = weekday(date).color()
         cell.wdayLabel.textColor = weekday(date).color()
-        
-        return cell;
     }
     
     func convertFromIndexPath(indexPath: NSIndexPath) -> NSDate {
