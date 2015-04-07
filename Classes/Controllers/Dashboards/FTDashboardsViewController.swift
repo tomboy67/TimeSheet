@@ -8,12 +8,20 @@
 
 import UIKit
 
+protocol FTWorkTimeUpdatedDelegate {
+    func updatedStartTime(targetDate: NSDate, startTime: NSDate)
+    func updatedEndTime(targetDate: NSDate, endTime: NSDate)
+}
+
 class FTDashboardsViewController: UIViewController {
     
     @IBOutlet weak var secondsLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var startTimeButton: DKCircleButton!
     @IBOutlet weak var endTimeButton: DKCircleButton!
+    @IBOutlet weak var workTimesContainerView: UIView!
+    
+    var delegate:FTWorkTimeUpdatedDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +33,8 @@ class FTDashboardsViewController: UIViewController {
                 self.updateSecondsLabel()
             },
             repeats: true)
+
+        println(self.childViewControllers.first)
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,29 +58,39 @@ class FTDashboardsViewController: UIViewController {
     }
     
     @IBAction func onClickStartTime(sender: AnyObject) {
+        let targetDate : NSDate = NSDate()
+        let startTime : NSDate = NSDate().roundDateToFlooringMinutes(15)
+        
         MagicalRecord.saveWithBlock({ (localContext) -> Void in
-            let workTime = WorkTime.findOrCreateByTargetDate(NSDate(), context: localContext)
-            workTime.startTime = NSDate().roundDateToFlooringMinutes(15)
+            let workTime = WorkTime.findOrCreateByTargetDate(targetDate, context: localContext)
+            workTime.startTime = startTime
 
             }, completion: { (result, error) -> Void in
                 if (error != nil) {
                     println("error")
                 } else {
-                    println("success");
+                    self.delegate?.updatedStartTime(targetDate, startTime: startTime)
+                    
+                    println("success")
                 }
         })
     }
     
     @IBAction func onClickEndTime(sender: AnyObject) {
+        let targetDate : NSDate = NSDate()
+        let endTime : NSDate =  NSDate().roundDateToFlooringMinutes(15)
+        
         MagicalRecord.saveWithBlock({ (localContext) -> Void in
-            let workTime = WorkTime.findOrCreateByTargetDate(NSDate(), context: localContext)
-            workTime.endTime = NSDate().roundDateToFlooringMinutes(15)
+            let workTime = WorkTime.findOrCreateByTargetDate(targetDate, context: localContext)
+            workTime.endTime = endTime
             
             }, completion: { (result, error) -> Void in
                 if (error != nil) {
                     println("error")
                 } else {
-                    println("success");
+                    self.delegate?.updatedEndTime(targetDate, endTime: endTime)
+
+                    println("success")
                 }
         })
     }

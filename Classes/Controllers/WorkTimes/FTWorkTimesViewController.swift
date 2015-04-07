@@ -8,13 +8,15 @@
 
 import UIKit
 
-class FTWorkTimesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+class FTWorkTimesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FTWorkTimeUpdatedDelegate {
     
     var targetDate: NSDate!
     var currentCalendar: NSCalendar!
     var daysOfMonthRange: NSRange!
     
     @IBOutlet weak var tableView: UITableView!
+    
     
     enum Week :Int {
         case Sunday = 1
@@ -60,6 +62,11 @@ class FTWorkTimesViewController: UIViewController, UITableViewDataSource, UITabl
         self.daysOfMonthRange = self.currentCalendar.rangeOfUnit(NSCalendarUnit.DayCalendarUnit,
             inUnit: NSCalendarUnit.MonthCalendarUnit,
             forDate: self.targetDate)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        let dashboardsViewCtl : FTDashboardsViewController = self.parentViewController as FTDashboardsViewController
+        dashboardsViewCtl.delegate = self;
     }
     
     override func didReceiveMemoryWarning() {
@@ -133,6 +140,16 @@ class FTWorkTimesViewController: UIViewController, UITableViewDataSource, UITabl
     
     func weekday(date : NSDate) -> Week {
         return Week(rawValue: self.weekdayNumber(date))!
+    }
+
+    func updatedStartTime(targetDate: NSDate, startTime: NSDate) {
+        //println(NSDate().today())
+        println(startTime)
+    }
+    
+    func updatedEndTime(targetDate: NSDate, endTime: NSDate) {
+        println(targetDate)
+        println(endTime)
     }
     
 }

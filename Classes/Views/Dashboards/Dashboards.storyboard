@@ -208,6 +208,7 @@
                         <outlet property="secondsLabel" destination="wVv-9d-nax" id="JCR-GK-cxP"/>
                         <outlet property="startTimeButton" destination="NeI-cz-Ax2" id="TaM-t7-9pL"/>
                         <outlet property="timeLabel" destination="df5-zK-uYD" id="Zhv-de-MVg"/>
+                        <outlet property="workTimesContainerView" destination="qVQ-by-fek" id="iYm-Ev-eog"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8un-Gg-PJh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -381,12 +382,18 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="278" y="2" width="34" height="21"/>
+                                                    </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8O8-PD-noB">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="233" y="2" width="34" height="21"/>
+                                                    </variation>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4dt-IR-Maf">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -416,7 +423,8 @@
                                                             <exclude reference="bzW-O4-EoG"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="widthClass=compact">
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="227" y="0.0" width="1" height="25"/>
                                                         <mask key="constraints">
                                                             <include reference="bzW-O4-EoG"/>
                                                         </mask>
@@ -467,7 +475,8 @@
                                                             <exclude reference="LaY-Wz-IJN"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="widthClass=compact">
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="272" y="0.0" width="1" height="25"/>
                                                         <mask key="constraints">
                                                             <include reference="LaY-Wz-IJN"/>
                                                         </mask>
