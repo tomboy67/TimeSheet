@@ -35,8 +35,6 @@ class FTDashboardsViewController: UIViewController {
                 self.updateSecondsLabel()
             },
             repeats: true)
-
-        println(self.childViewControllers.first)
     }
     
     override func didReceiveMemoryWarning() {
