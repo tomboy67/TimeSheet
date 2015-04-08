@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		995DF7E4B06D577A34E6C306 /* libPods-TimeSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B272AACF1CAA513AE80F64 /* libPods-TimeSheet.a */; };
 		A335080F1ACFB8CA00B2212A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A335080E1ACFB8CA00B2212A /* AppDelegate.swift */; };
 		A33508121ACFB8CA00B2212A /* TimeSheet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A33508101ACFB8CA00B2212A /* TimeSheet.xcdatamodeld */; };
 		A33508191ACFB8CB00B2212A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A33508181ACFB8CB00B2212A /* Images.xcassets */; };
@@ -22,6 +21,7 @@
 		A3BF72E11AD173DB00FF6445 /* _WorkTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BF72DF1AD173DB00FF6445 /* _WorkTime.swift */; };
 		A3BF72E21AD173DB00FF6445 /* WorkTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BF72E01AD173DB00FF6445 /* WorkTime.swift */; };
 		A3BF72E41AD17AD900FF6445 /* NSDate+DayToTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BF72E31AD17AD900FF6445 /* NSDate+DayToTime.swift */; };
+		D0E551CEEB2AA771A7C6D628 /* Pods_TimeSheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56FA27DE0B586F4FF68F11C6 /* Pods_TimeSheet.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +37,7 @@
 /* Begin PBXFileReference section */
 		3A51A6680E9E86A838B2D693 /* Pods-TimeSheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeSheet.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeSheet/Pods-TimeSheet.release.xcconfig"; sourceTree = "<group>"; };
 		3FC3D025CC18BD78A4FA6A06 /* Pods-TimeSheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeSheet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeSheet/Pods-TimeSheet.debug.xcconfig"; sourceTree = "<group>"; };
+		56FA27DE0B586F4FF68F11C6 /* Pods_TimeSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33508091ACFB8CA00B2212A /* TimeSheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeSheet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A335080D1ACFB8CA00B2212A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A335080E1ACFB8CA00B2212A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,7 +58,6 @@
 		A3BF72DF1AD173DB00FF6445 /* _WorkTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _WorkTime.swift; sourceTree = "<group>"; };
 		A3BF72E01AD173DB00FF6445 /* WorkTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkTime.swift; sourceTree = "<group>"; };
 		A3BF72E31AD17AD900FF6445 /* NSDate+DayToTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+DayToTime.swift"; sourceTree = "<group>"; };
-		C1B272AACF1CAA513AE80F64 /* libPods-TimeSheet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TimeSheet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				995DF7E4B06D577A34E6C306 /* libPods-TimeSheet.a in Frameworks */,
+				D0E551CEEB2AA771A7C6D628 /* Pods_TimeSheet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +249,7 @@
 		CF3CA25673706E846E63C569 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C1B272AACF1CAA513AE80F64 /* libPods-TimeSheet.a */,
+				56FA27DE0B586F4FF68F11C6 /* Pods_TimeSheet.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -266,6 +266,7 @@
 				A33508061ACFB8CA00B2212A /* Frameworks */,
 				A33508071ACFB8CA00B2212A /* Resources */,
 				29A813A54E0080BF82A4DEA4 /* Copy Pods Resources */,
+				8C7267831B9670EA726B61D8 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -367,6 +368,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TimeSheet/Pods-TimeSheet-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C7267831B9670EA726B61D8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TimeSheet/Pods-TimeSheet-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E5753B409E3C61F2D72132DC /* Check Pods Manifest.lock */ = {

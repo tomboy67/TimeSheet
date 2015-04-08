@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import DKCircleButton
+import MagicalRecord
 
 protocol FTWorkTimeUpdatedDelegate {
     func updatedStartTime(targetDate: NSDate, startTime: NSDate)
@@ -33,8 +35,6 @@ class FTDashboardsViewController: UIViewController {
                 self.updateSecondsLabel()
             },
             repeats: true)
-
-        println(self.childViewControllers.first)
     }
     
     override func didReceiveMemoryWarning() {

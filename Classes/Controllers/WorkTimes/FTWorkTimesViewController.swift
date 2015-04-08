@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Timepiece
 
 
 class FTWorkTimesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FTWorkTimeUpdatedDelegate {
@@ -16,37 +17,6 @@ class FTWorkTimesViewController: UIViewController, UITableViewDataSource, UITabl
     var daysOfMonthRange: NSRange!
     
     @IBOutlet weak var tableView: UITableView!
-    
-    
-    enum Week :Int {
-        case Sunday = 1
-        case Monday = 2
-        case Tuesday = 3
-        case Wednesday = 4
-        case Thursday = 5
-        case Friday = 6
-        case Saturday = 7
-        
-        func name() -> String {
-            switch self {
-            case .Sunday: return "日"
-            case .Monday: return "月"
-            case .Tuesday: return "火"
-            case .Wednesday: return "水"
-            case .Thursday: return "木"
-            case .Friday: return "金"
-            case .Saturday: return "土"
-            }
-        }
-        
-        func color() -> UIColor {
-            switch self {
-            case .Sunday: return UIColor.redColor()
-            case .Saturday: return UIColor.blueColor()
-            default: return UIColor.blackColor()
-            }
-        }
-    }
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -95,29 +65,18 @@ class FTWorkTimesViewController: UIViewController, UITableViewDataSource, UITabl
         dateFormatter.dateFormat = "HH:mm"
         
         let date = self.convertFromIndexPath(indexPath)
-        let predicate : NSPredicate? = NSPredicate(format: "(targetDate >= %@ ) and (targetDate < %@)", date.beginningOfDay(), date.endOfDay())
-        let workTime = WorkTime.MR_findFirstWithPredicate(predicate) as WorkTime?
+        let predicate : NSPredicate? = NSPredicate(format: "(targetDate >= %@ ) and (targetDate < %@)", date.beginningOfDay, date.endOfDay)
+        let workTime : WorkTime? = WorkTime.MR_findFirstWithPredicate(predicate) as WorkTime?
         
-        if (workTime?.startTime != nil){
-            cell.startTimeLabel.text = dateFormatter.stringFromDate(workTime!.startTime!)
-        } else {
-            cell.startTimeLabel.text = nil
-        }
+        cell.startTimeLabel.text = workTime?.startTime?.timeHuman()
+        cell.endTimeLabel.text = workTime?.endTime?.timeHuman()
+        cell.dayLabel.text = NSString(format: "%02d日", date.day)
+        cell.wdayLabel.text = "\(date.week().name())"
+        cell.totalTimeLabel.text = workTime?.totalTimeHuman()
+        cell.overtimeLabel.text = workTime?.overTimeHuman()
         
-        if (workTime?.endTime != nil) {
-            cell.endTimeLabel.text = dateFormatter.stringFromDate(workTime!.endTime!)
-        } else {
-            cell.endTimeLabel.text = nil
-        }
-        
-        let day = indexPath.row + 1
-        let dayHuman = NSString(format: "%02d", day)
-        
-        cell.dayLabel.text = "\(dayHuman)日";
-        cell.wdayLabel.text = "\(self.weekday(date).name())";
-        
-        cell.dayLabel.textColor = weekday(date).color()
-        cell.wdayLabel.textColor = weekday(date).color()
+        cell.dayLabel.textColor = date.week().color()
+        cell.wdayLabel.textColor = date.week().color()
     }
     
     func convertFromIndexPath(indexPath: NSIndexPath) -> NSDate {
@@ -130,26 +89,20 @@ class FTWorkTimesViewController: UIViewController, UITableViewDataSource, UITabl
         
         return self.currentCalendar.dateFromComponents(components)!
     }
-    
-    func weekdayNumber(date: NSDate) -> Int {
-        let calendar = NSCalendar.currentCalendar()
-        var components: NSDateComponents = calendar.components(
-            NSCalendarUnit.CalendarUnitWeekday, fromDate: date)
-        return components.weekday
-    }
-    
-    func weekday(date : NSDate) -> Week {
-        return Week(rawValue: self.weekdayNumber(date))!
-    }
 
     func updatedStartTime(targetDate: NSDate, startTime: NSDate) {
-        //println(NSDate().today())
-        println(startTime)
+        self.updateTableViewFromDate(targetDate)
     }
     
     func updatedEndTime(targetDate: NSDate, endTime: NSDate) {
-        println(targetDate)
-        println(endTime)
+        self.updateTableViewFromDate(targetDate)
     }
     
+    func updateTableViewFromDate(date: NSDate) {
+        let indexPath : NSIndexPath = NSIndexPath(forRow: date.day - 1, inSection: 0)
+        
+        self.tableView.beginUpdates()
+        self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+        self.tableView.endUpdates()
+    }
 }
