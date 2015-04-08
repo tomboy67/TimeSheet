@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Timepiece
 
 
 class FTWorkTimesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FTWorkTimeUpdatedDelegate {
@@ -143,13 +144,18 @@ class FTWorkTimesViewController: UIViewController, UITableViewDataSource, UITabl
     }
 
     func updatedStartTime(targetDate: NSDate, startTime: NSDate) {
-        //println(NSDate().today())
-        println(startTime)
+        self.updateTableViewFromDate(targetDate)
     }
     
     func updatedEndTime(targetDate: NSDate, endTime: NSDate) {
-        println(targetDate)
-        println(endTime)
+        self.updateTableViewFromDate(targetDate)
     }
     
+    func updateTableViewFromDate(date: NSDate) {
+        let indexPath : NSIndexPath = NSIndexPath(forRow: date.day - 1, inSection: 0)
+        
+        self.tableView.beginUpdates()
+        self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+        self.tableView.endUpdates()
+    }
 }

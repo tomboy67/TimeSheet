@@ -7,6 +7,7 @@ target 'TimeSheet' do
   pod 'DKCircleButton', git: "https://github.com/tomomura/DKCircleButton.git", branch: "use-storyboard"
   pod 'BlocksKit'
   pod 'MagicalRecord'
+  pod 'Timepiece'
 end
 
 target 'TimeSheetTests' do
