@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import DKCircleButton
+import MagicalRecord
 
 protocol FTWorkTimeUpdatedDelegate {
     func updatedStartTime(targetDate: NSDate, startTime: NSDate)

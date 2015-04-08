@@ -21,8 +21,19 @@ PODS:
 
 DEPENDENCIES:
   - BlocksKit
-  - DKCircleButton
+  - DKCircleButton (from `https://github.com/tomomura/DKCircleButton.git`, branch
+    `use-storyboard`)
   - MagicalRecord
+
+EXTERNAL SOURCES:
+  DKCircleButton:
+    :branch: use-storyboard
+    :git: https://github.com/tomomura/DKCircleButton.git
+
+CHECKOUT OPTIONS:
+  DKCircleButton:
+    :commit: bddfcd8e83e57f9189ea6af94f82c770b96d3750
+    :git: https://github.com/tomomura/DKCircleButton.git
 
 SPEC CHECKSUMS:
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
