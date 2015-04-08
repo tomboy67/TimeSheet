@@ -1,0 +1,15 @@
+[
+ {
+ "text" : "Welcome to 【TimeSheet】",
+ "image" : "swipe",
+ },
+ {
+ "text" : "【TimeSheet】は美しいデザインであなたの時間を管理します",
+ "image" : "check",
+ },
+ {
+ "text" : "日々の時間選択に最適な選択を",
+ "image" : "happy",
+ "button" : "【TimeSheet】を使ってみる"
+ }
+]
