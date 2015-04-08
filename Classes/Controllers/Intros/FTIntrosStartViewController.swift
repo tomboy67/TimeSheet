@@ -23,13 +23,11 @@ class FTIntrosStartViewController: UIViewController, SRFSurfboardDelegate {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let surfboard = segue.destinationViewController as SRFSurfboardViewController
-        
         let path : String = NSBundle.mainBundle().pathForResource("panels", ofType: "json")!
         let panels : Array = SRFSurfboardViewController .panelsFromConfigurationAtPath(path)
-        println(panels)
+        
         surfboard.setPanels(panels)
         surfboard.delegate = self;
-        
         surfboard.backgroundColor = self.view.backgroundColor
     }
     
