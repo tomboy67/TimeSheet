@@ -7,32 +7,92 @@
 //
 
 import UIKit
+import DKCircleButton
+import MagicalRecord
+
+protocol FTWorkTimeUpdatedDelegate {
+    func updatedStartTime(targetDate: NSDate, startTime: NSDate)
+    func updatedEndTime(targetDate: NSDate, endTime: NSDate)
+}
 
 class FTDashboardsViewController: UIViewController {
     
+    @IBOutlet weak var secondsLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var startTimeButton: DKCircleButton!
     @IBOutlet weak var endTimeButton: DKCircleButton!
-
+    @IBOutlet weak var workTimesContainerView: UIView!
+    
+    var delegate:FTWorkTimeUpdatedDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "タイムカード"
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        NSTimer.bk_scheduledTimerWithTimeInterval(1,
+            block: { (timer) -> Void in
+                self.updateTimeLabel()
+                self.updateSecondsLabel()
+            },
+            repeats: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
-    */
+    
+    func updateTimeLabel() {
+        let now = NSDate()
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        self.timeLabel.text = dateFormatter.stringFromDate(now)
+    }
+    
+    func updateSecondsLabel() {
+        let now = NSDate()
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "ss"
+        self.secondsLabel.text = dateFormatter.stringFromDate(now)
+    }
+    
+    @IBAction func onClickStartTime(sender: AnyObject) {
+        let targetDate : NSDate = NSDate()
+        let startTime : NSDate = NSDate().roundDateToFlooringMinutes(15)
+        
+        MagicalRecord.saveWithBlock({ (localContext) -> Void in
+            let workTime = WorkTime.findOrCreateByTargetDate(targetDate, context: localContext)
+            workTime.startTime = startTime
 
+            }, completion: { (result, error) -> Void in
+                if (error != nil) {
+                    println("error")
+                } else {
+                    self.delegate?.updatedStartTime(targetDate, startTime: startTime)
+                    
+                    println("success")
+                }
+        })
+    }
+    
+    @IBAction func onClickEndTime(sender: AnyObject) {
+        let targetDate : NSDate = NSDate()
+        let endTime : NSDate =  NSDate().roundDateToFlooringMinutes(15)
+        
+        MagicalRecord.saveWithBlock({ (localContext) -> Void in
+            let workTime = WorkTime.findOrCreateByTargetDate(targetDate, context: localContext)
+            workTime.endTime = endTime
+            
+            }, completion: { (result, error) -> Void in
+                if (error != nil) {
+                    println("error")
+                } else {
+                    self.delegate?.updatedEndTime(targetDate, endTime: endTime)
+
+                    println("success")
+                }
+        })
+    }
+    
 }
