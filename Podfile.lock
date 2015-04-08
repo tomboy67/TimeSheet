@@ -18,6 +18,7 @@ PODS:
   - MagicalRecord (2.2):
     - MagicalRecord/Core (= 2.2)
   - MagicalRecord/Core (2.2)
+  - Surfboard (1.0.0)
   - Timepiece (0.2.0)
 
 DEPENDENCIES:
@@ -25,6 +26,7 @@ DEPENDENCIES:
   - DKCircleButton (from `https://github.com/tomomura/DKCircleButton.git`, branch
     `use-storyboard`)
   - MagicalRecord
+  - Surfboard
   - Timepiece
 
 EXTERNAL SOURCES:
@@ -41,6 +43,7 @@ SPEC CHECKSUMS:
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   DKCircleButton: 62564c9debae08ad77dabb8d9658dfeb5520f2c4
   MagicalRecord: f8a56bb87ab6552f20c4bb8681a1958a197ea3cd
+  Surfboard: 66a2f25c2460eace935491dbba90c148e902981b
   Timepiece: 0977b56f172f492b026bed7e686edd0c5573d72a
 
 COCOAPODS: 0.36.3

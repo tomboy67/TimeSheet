@@ -12,6 +12,11 @@
 		A33508191ACFB8CB00B2212A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A33508181ACFB8CB00B2212A /* Images.xcassets */; };
 		A335081C1ACFB8CB00B2212A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A335081A1ACFB8CB00B2212A /* LaunchScreen.xib */; };
 		A33508281ACFB8CB00B2212A /* TimeSheetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33508271ACFB8CB00B2212A /* TimeSheetTests.swift */; };
+		A37B5C581AD57CE300A49CB8 /* Intros.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A37B5C571AD57CE300A49CB8 /* Intros.storyboard */; };
+		A37B5C5A1AD5800900A49CB8 /* FTIntrosStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B5C591AD5800900A49CB8 /* FTIntrosStartViewController.swift */; };
+		A37B5C5F1AD581F800A49CB8 /* panels.json in Resources */ = {isa = PBXBuildFile; fileRef = A37B5C5E1AD581F800A49CB8 /* panels.json */; };
+		A37B5C611AD5855000A49CB8 /* SRFSurfboardPanelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A37B5C601AD5855000A49CB8 /* SRFSurfboardPanelCell.xib */; };
+		A37B5C651AD5861E00A49CB8 /* Surfboard.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A37B5C641AD5861E00A49CB8 /* Surfboard.xcassets */; };
 		A3B146351ACFC74200BAD8F0 /* Dashboards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3B146341ACFC74200BAD8F0 /* Dashboards.storyboard */; };
 		A3B146371ACFC8A100BAD8F0 /* FTDashboardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B146361ACFC8A100BAD8F0 /* FTDashboardsViewController.swift */; };
 		A3B1463A1ACFC90600BAD8F0 /* FTTopNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B146391ACFC90600BAD8F0 /* FTTopNavigationController.swift */; };
@@ -47,6 +52,11 @@
 		A33508211ACFB8CB00B2212A /* TimeSheetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeSheetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33508261ACFB8CB00B2212A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A33508271ACFB8CB00B2212A /* TimeSheetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSheetTests.swift; sourceTree = "<group>"; };
+		A37B5C571AD57CE300A49CB8 /* Intros.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Intros.storyboard; sourceTree = "<group>"; };
+		A37B5C591AD5800900A49CB8 /* FTIntrosStartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTIntrosStartViewController.swift; sourceTree = "<group>"; };
+		A37B5C5E1AD581F800A49CB8 /* panels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = panels.json; sourceTree = "<group>"; };
+		A37B5C601AD5855000A49CB8 /* SRFSurfboardPanelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SRFSurfboardPanelCell.xib; path = "../../../../../../Downloads/Surfboard-master/Surfboard/SRFSurfboard/Panel Cells/Default Cell/SRFSurfboardPanelCell.xib"; sourceTree = "<group>"; };
+		A37B5C641AD5861E00A49CB8 /* Surfboard.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Surfboard.xcassets; path = "../../../../../../../Downloads/Surfboard-master/Surfboard/Sample Data/Surfboard.xcassets"; sourceTree = "<group>"; };
 		A3AF5D1B1AD10BDC0052EDE7 /* TimeSheet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimeSheet-Bridging-Header.h"; sourceTree = "<group>"; };
 		A3B146341ACFC74200BAD8F0 /* Dashboards.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Dashboards.storyboard; path = Views/Dashboards/Dashboards.storyboard; sourceTree = "<group>"; };
 		A3B146361ACFC8A100BAD8F0 /* FTDashboardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDashboardsViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +121,7 @@
 		A335080B1ACFB8CA00B2212A /* TimeSheet */ = {
 			isa = PBXGroup;
 			children = (
+				A37B5C5B1AD5814E00A49CB8 /* Assets */,
 				A3B1462C1ACFC6EC00BAD8F0 /* Classes */,
 				A335080E1ACFB8CA00B2212A /* AppDelegate.swift */,
 				A33508181ACFB8CB00B2212A /* Images.xcassets */,
@@ -146,6 +157,65 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A37B5C551AD57BFB00A49CB8 /* Intros */ = {
+			isa = PBXGroup;
+			children = (
+				A37B5C591AD5800900A49CB8 /* FTIntrosStartViewController.swift */,
+			);
+			path = Intros;
+			sourceTree = "<group>";
+		};
+		A37B5C561AD57C0F00A49CB8 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				A37B5C601AD5855000A49CB8 /* SRFSurfboardPanelCell.xib */,
+				A37B5C571AD57CE300A49CB8 /* Intros.storyboard */,
+			);
+			name = Intro;
+			path = Views/Intros;
+			sourceTree = "<group>";
+		};
+		A37B5C5B1AD5814E00A49CB8 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A37B5C621AD585EF00A49CB8 /* Images */,
+				A37B5C5C1AD581C800A49CB8 /* JSONS */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		A37B5C5C1AD581C800A49CB8 /* JSONS */ = {
+			isa = PBXGroup;
+			children = (
+				A37B5C5D1AD581D100A49CB8 /* Intros */,
+			);
+			path = JSONS;
+			sourceTree = "<group>";
+		};
+		A37B5C5D1AD581D100A49CB8 /* Intros */ = {
+			isa = PBXGroup;
+			children = (
+				A37B5C5E1AD581F800A49CB8 /* panels.json */,
+			);
+			path = Intros;
+			sourceTree = "<group>";
+		};
+		A37B5C621AD585EF00A49CB8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A37B5C631AD585FB00A49CB8 /* Intros */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		A37B5C631AD585FB00A49CB8 /* Intros */ = {
+			isa = PBXGroup;
+			children = (
+				A37B5C641AD5861E00A49CB8 /* Surfboard.xcassets */,
+			);
+			path = Intros;
+			sourceTree = "<group>";
+		};
 		A3B1462C1ACFC6EC00BAD8F0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +232,7 @@
 		A3B1462D1ACFC70000BAD8F0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A37B5C551AD57BFB00A49CB8 /* Intros */,
 				A3B1463B1ACFD1D800BAD8F0 /* WorkTimes */,
 				A3B146381ACFC8D600BAD8F0 /* Shared */,
 				A3B1462E1ACFC71500BAD8F0 /* Dashboards */,
@@ -180,6 +251,7 @@
 		A3B146321ACFC72E00BAD8F0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A37B5C561AD57C0F00A49CB8 /* Intro */,
 				A3B1463E1ACFD7D300BAD8F0 /* WorkTimes */,
 				A3B146331ACFC73400BAD8F0 /* Dashboards */,
 			);
@@ -339,9 +411,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A37B5C651AD5861E00A49CB8 /* Surfboard.xcassets in Resources */,
 				A335081C1ACFB8CB00B2212A /* LaunchScreen.xib in Resources */,
 				A3B146351ACFC74200BAD8F0 /* Dashboards.storyboard in Resources */,
 				A33508191ACFB8CB00B2212A /* Images.xcassets in Resources */,
+				A37B5C5F1AD581F800A49CB8 /* panels.json in Resources */,
+				A37B5C581AD57CE300A49CB8 /* Intros.storyboard in Resources */,
+				A37B5C611AD5855000A49CB8 /* SRFSurfboardPanelCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +486,7 @@
 				A3B146401ACFD88600BAD8F0 /* FTWorkTimesTableViewDayCell.swift in Sources */,
 				A33508121ACFB8CA00B2212A /* TimeSheet.xcdatamodeld in Sources */,
 				A3BF72E21AD173DB00FF6445 /* WorkTime.swift in Sources */,
+				A37B5C5A1AD5800900A49CB8 /* FTIntrosStartViewController.swift in Sources */,
 				A3BF72DA1AD16DB100FF6445 /* NSDate+RoundToTime.m in Sources */,
 				A3BF72E11AD173DB00FF6445 /* _WorkTime.swift in Sources */,
 				A335080F1ACFB8CA00B2212A /* AppDelegate.swift in Sources */,
