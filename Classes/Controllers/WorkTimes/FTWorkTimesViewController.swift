@@ -22,20 +22,20 @@ class FTWorkTimesViewController: UIViewController, UITableViewDataSource, UITabl
         super.init(coder: aDecoder)
         
         self.targetDate = NSDate()
-        self.currentCalendar = NSCalendar(identifier: NSGregorianCalendar)
+        self.currentCalendar = NSCalendar.currentCalendar()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        self.daysOfMonthRange = self.currentCalendar.rangeOfUnit(NSCalendarUnit.DayCalendarUnit,
-            inUnit: NSCalendarUnit.MonthCalendarUnit,
+        self.daysOfMonthRange = self.currentCalendar.rangeOfUnit(NSCalendarUnit.CalendarUnitDay,
+            inUnit: NSCalendarUnit.CalendarUnitMonth,
             forDate: self.targetDate)
     }
     
     override func viewDidAppear(animated: Bool) {
-        let dashboardsViewCtl : FTDashboardsViewController = self.parentViewController as FTDashboardsViewController
+        let dashboardsViewCtl : FTDashboardsViewController = self.parentViewController as! FTDashboardsViewController
         dashboardsViewCtl.delegate = self;
     }
     
@@ -43,7 +43,7 @@ class FTWorkTimesViewController: UIViewController, UITableViewDataSource, UITabl
         super.didReceiveMemoryWarning()
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1;
     }
     
@@ -52,7 +52,7 @@ class FTWorkTimesViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as FTWorkTimesTableViewDayCell;
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! FTWorkTimesTableViewDayCell;
         
         self.cellConfigure(cell, indexPath: indexPath)
 
@@ -66,12 +66,13 @@ class FTWorkTimesViewController: UIViewController, UITableViewDataSource, UITabl
         
         let date = self.convertFromIndexPath(indexPath)
         let predicate : NSPredicate? = NSPredicate(format: "(targetDate >= %@ ) and (targetDate < %@)", date.beginningOfDay, date.endOfDay)
-        let workTime : WorkTime? = WorkTime.MR_findFirstWithPredicate(predicate) as WorkTime?
+        let workTime : WorkTime? = WorkTime.MR_findFirstWithPredicate(predicate) as! WorkTime?
         
         cell.startTimeLabel.text = workTime?.startTime?.timeHuman()
         cell.endTimeLabel.text = workTime?.endTime?.timeHuman()
-        cell.dayLabel.text = NSString(format: "%02d日", date.day)
+        cell.dayLabel.text = String(format: "%02d日", date.day)
         cell.wdayLabel.text = "\(date.week().name())"
+
         cell.totalTimeLabel.text = workTime?.totalTimeHuman()
         cell.overtimeLabel.text = workTime?.overTimeHuman()
         
@@ -81,7 +82,8 @@ class FTWorkTimesViewController: UIViewController, UITableViewDataSource, UITabl
     
     func convertFromIndexPath(indexPath: NSIndexPath) -> NSDate {
         let components = NSDateComponents()
-        let targetCompornent = self.currentCalendar.components(NSCalendarUnit.YearCalendarUnit | NSCalendarUnit.MonthCalendarUnit, fromDate: self.targetDate)
+        let targetCompornent = self.currentCalendar.components(NSCalendarUnit.CalendarUnitYear | NSCalendarUnit.CalendarUnitMonth, fromDate: self.targetDate)
+        
         
         components.year = targetCompornent.year
         components.month = targetCompornent.month

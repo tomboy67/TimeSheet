@@ -16,8 +16,9 @@
 /* Private methods */
 + (NSDateComponents *)getTimeComponents:(NSDate *)date
 {
+    
     NSDateComponents *timeComps = [[NSCalendar currentCalendar]
-                                   components:(NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit)
+                                   components:(NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond)
                                    fromDate:date];
     return timeComps;
 }
