@@ -12,11 +12,14 @@
 		A33508191ACFB8CB00B2212A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A33508181ACFB8CB00B2212A /* Images.xcassets */; };
 		A335081C1ACFB8CB00B2212A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A335081A1ACFB8CB00B2212A /* LaunchScreen.xib */; };
 		A33508281ACFB8CB00B2212A /* TimeSheetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33508271ACFB8CB00B2212A /* TimeSheetTests.swift */; };
-		A37B5C581AD57CE300A49CB8 /* Intros.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A37B5C571AD57CE300A49CB8 /* Intros.storyboard */; };
-		A37B5C5A1AD5800900A49CB8 /* FTIntrosStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37B5C591AD5800900A49CB8 /* FTIntrosStartViewController.swift */; };
+		A375538F1AF64B6700BE4A92 /* FTIntrosCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A375538E1AF64B6700BE4A92 /* FTIntrosCompleteViewController.swift */; };
+		A37553911AF6523300BE4A92 /* media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A37553901AF6523300BE4A92 /* media.xcassets */; };
 		A37B5C5F1AD581F800A49CB8 /* panels.json in Resources */ = {isa = PBXBuildFile; fileRef = A37B5C5E1AD581F800A49CB8 /* panels.json */; };
-		A37B5C611AD5855000A49CB8 /* SRFSurfboardPanelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A37B5C601AD5855000A49CB8 /* SRFSurfboardPanelCell.xib */; };
-		A37B5C651AD5861E00A49CB8 /* Surfboard.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A37B5C641AD5861E00A49CB8 /* Surfboard.xcassets */; };
+		A39813181AEDEBC900348E7A /* FTIntrosPageDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39813171AEDEBC900348E7A /* FTIntrosPageDataViewController.swift */; };
+		A398131A1AEDF1CF00348E7A /* FTIntrosWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39813191AEDF1CF00348E7A /* FTIntrosWelcomeViewController.swift */; };
+		A398131C1AEE064800348E7A /* FTIntrosInputInitialDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A398131B1AEE064800348E7A /* FTIntrosInputInitialDataViewController.swift */; };
+		A39813201AEE13C800348E7A /* _User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A398131E1AEE13C800348E7A /* _User.swift */; };
+		A39813211AEE13C800348E7A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A398131F1AEE13C800348E7A /* User.swift */; };
 		A3B146351ACFC74200BAD8F0 /* Dashboards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3B146341ACFC74200BAD8F0 /* Dashboards.storyboard */; };
 		A3B146371ACFC8A100BAD8F0 /* FTDashboardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B146361ACFC8A100BAD8F0 /* FTDashboardsViewController.swift */; };
 		A3B1463A1ACFC90600BAD8F0 /* FTTopNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B146391ACFC90600BAD8F0 /* FTTopNavigationController.swift */; };
@@ -26,6 +29,9 @@
 		A3BF72E11AD173DB00FF6445 /* _WorkTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BF72DF1AD173DB00FF6445 /* _WorkTime.swift */; };
 		A3BF72E21AD173DB00FF6445 /* WorkTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BF72E01AD173DB00FF6445 /* WorkTime.swift */; };
 		A3BF72E41AD17AD900FF6445 /* NSDate+DayToTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BF72E31AD17AD900FF6445 /* NSDate+DayToTime.swift */; };
+		A3DD03041AE36A7000935E4F /* Intros.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3DD03031AE36A7000935E4F /* Intros.storyboard */; };
+		A3DD03061AE36D0500935E4F /* FTIntrosPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DD03051AE36D0500935E4F /* FTIntrosPageViewController.swift */; };
+		A3DD03081AE36D9800935E4F /* FTIntrosModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DD03071AE36D9800935E4F /* FTIntrosModelViewController.swift */; };
 		D0E551CEEB2AA771A7C6D628 /* Pods_TimeSheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56FA27DE0B586F4FF68F11C6 /* Pods_TimeSheet.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -52,11 +58,14 @@
 		A33508211ACFB8CB00B2212A /* TimeSheetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeSheetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33508261ACFB8CB00B2212A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A33508271ACFB8CB00B2212A /* TimeSheetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSheetTests.swift; sourceTree = "<group>"; };
-		A37B5C571AD57CE300A49CB8 /* Intros.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Intros.storyboard; sourceTree = "<group>"; };
-		A37B5C591AD5800900A49CB8 /* FTIntrosStartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTIntrosStartViewController.swift; sourceTree = "<group>"; };
+		A375538E1AF64B6700BE4A92 /* FTIntrosCompleteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTIntrosCompleteViewController.swift; sourceTree = "<group>"; };
+		A37553901AF6523300BE4A92 /* media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = media.xcassets; sourceTree = "<group>"; };
 		A37B5C5E1AD581F800A49CB8 /* panels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = panels.json; sourceTree = "<group>"; };
-		A37B5C601AD5855000A49CB8 /* SRFSurfboardPanelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SRFSurfboardPanelCell.xib; path = "../../../../../../Downloads/Surfboard-master/Surfboard/SRFSurfboard/Panel Cells/Default Cell/SRFSurfboardPanelCell.xib"; sourceTree = "<group>"; };
-		A37B5C641AD5861E00A49CB8 /* Surfboard.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Surfboard.xcassets; path = "../../../../../../../Downloads/Surfboard-master/Surfboard/Sample Data/Surfboard.xcassets"; sourceTree = "<group>"; };
+		A39813171AEDEBC900348E7A /* FTIntrosPageDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTIntrosPageDataViewController.swift; sourceTree = "<group>"; };
+		A39813191AEDF1CF00348E7A /* FTIntrosWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTIntrosWelcomeViewController.swift; sourceTree = "<group>"; };
+		A398131B1AEE064800348E7A /* FTIntrosInputInitialDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTIntrosInputInitialDataViewController.swift; sourceTree = "<group>"; };
+		A398131E1AEE13C800348E7A /* _User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _User.swift; sourceTree = "<group>"; };
+		A398131F1AEE13C800348E7A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A3AF5D1B1AD10BDC0052EDE7 /* TimeSheet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimeSheet-Bridging-Header.h"; sourceTree = "<group>"; };
 		A3B146341ACFC74200BAD8F0 /* Dashboards.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Dashboards.storyboard; path = Views/Dashboards/Dashboards.storyboard; sourceTree = "<group>"; };
 		A3B146361ACFC8A100BAD8F0 /* FTDashboardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDashboardsViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +77,9 @@
 		A3BF72DF1AD173DB00FF6445 /* _WorkTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _WorkTime.swift; sourceTree = "<group>"; };
 		A3BF72E01AD173DB00FF6445 /* WorkTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkTime.swift; sourceTree = "<group>"; };
 		A3BF72E31AD17AD900FF6445 /* NSDate+DayToTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+DayToTime.swift"; sourceTree = "<group>"; };
+		A3DD03031AE36A7000935E4F /* Intros.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Intros.storyboard; sourceTree = SOURCE_ROOT; };
+		A3DD03051AE36D0500935E4F /* FTIntrosPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTIntrosPageViewController.swift; sourceTree = "<group>"; };
+		A3DD03071AE36D9800935E4F /* FTIntrosModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTIntrosModelViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +172,12 @@
 		A37B5C551AD57BFB00A49CB8 /* Intros */ = {
 			isa = PBXGroup;
 			children = (
-				A37B5C591AD5800900A49CB8 /* FTIntrosStartViewController.swift */,
+				A3DD03051AE36D0500935E4F /* FTIntrosPageViewController.swift */,
+				A3DD03071AE36D9800935E4F /* FTIntrosModelViewController.swift */,
+				A39813171AEDEBC900348E7A /* FTIntrosPageDataViewController.swift */,
+				A39813191AEDF1CF00348E7A /* FTIntrosWelcomeViewController.swift */,
+				A398131B1AEE064800348E7A /* FTIntrosInputInitialDataViewController.swift */,
+				A375538E1AF64B6700BE4A92 /* FTIntrosCompleteViewController.swift */,
 			);
 			path = Intros;
 			sourceTree = "<group>";
@@ -168,8 +185,7 @@
 		A37B5C561AD57C0F00A49CB8 /* Intro */ = {
 			isa = PBXGroup;
 			children = (
-				A37B5C601AD5855000A49CB8 /* SRFSurfboardPanelCell.xib */,
-				A37B5C571AD57CE300A49CB8 /* Intros.storyboard */,
+				A3DD03031AE36A7000935E4F /* Intros.storyboard */,
 			);
 			name = Intro;
 			path = Views/Intros;
@@ -211,9 +227,18 @@
 		A37B5C631AD585FB00A49CB8 /* Intros */ = {
 			isa = PBXGroup;
 			children = (
-				A37B5C641AD5861E00A49CB8 /* Surfboard.xcassets */,
+				A37553901AF6523300BE4A92 /* media.xcassets */,
 			);
 			path = Intros;
+			sourceTree = "<group>";
+		};
+		A398131D1AEE139C00348E7A /* User */ = {
+			isa = PBXGroup;
+			children = (
+				A398131E1AEE13C800348E7A /* _User.swift */,
+				A398131F1AEE13C800348E7A /* User.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		A3B1462C1ACFC6EC00BAD8F0 /* Classes */ = {
@@ -304,6 +329,7 @@
 		A3BF72DB1AD1739000FF6445 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A398131D1AEE139C00348E7A /* User */,
 				A3BF72DE1AD173B800FF6445 /* WorkTime */,
 			);
 			path = Models;
@@ -411,13 +437,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A37B5C651AD5861E00A49CB8 /* Surfboard.xcassets in Resources */,
+				A37553911AF6523300BE4A92 /* media.xcassets in Resources */,
 				A335081C1ACFB8CB00B2212A /* LaunchScreen.xib in Resources */,
 				A3B146351ACFC74200BAD8F0 /* Dashboards.storyboard in Resources */,
 				A33508191ACFB8CB00B2212A /* Images.xcassets in Resources */,
 				A37B5C5F1AD581F800A49CB8 /* panels.json in Resources */,
-				A37B5C581AD57CE300A49CB8 /* Intros.storyboard in Resources */,
-				A37B5C611AD5855000A49CB8 /* SRFSurfboardPanelCell.xib in Resources */,
+				A3DD03041AE36A7000935E4F /* Intros.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,13 +510,20 @@
 			files = (
 				A3B146401ACFD88600BAD8F0 /* FTWorkTimesTableViewDayCell.swift in Sources */,
 				A33508121ACFB8CA00B2212A /* TimeSheet.xcdatamodeld in Sources */,
+				A398131A1AEDF1CF00348E7A /* FTIntrosWelcomeViewController.swift in Sources */,
+				A39813181AEDEBC900348E7A /* FTIntrosPageDataViewController.swift in Sources */,
+				A39813201AEE13C800348E7A /* _User.swift in Sources */,
 				A3BF72E21AD173DB00FF6445 /* WorkTime.swift in Sources */,
-				A37B5C5A1AD5800900A49CB8 /* FTIntrosStartViewController.swift in Sources */,
+				A3DD03081AE36D9800935E4F /* FTIntrosModelViewController.swift in Sources */,
+				A39813211AEE13C800348E7A /* User.swift in Sources */,
+				A3DD03061AE36D0500935E4F /* FTIntrosPageViewController.swift in Sources */,
 				A3BF72DA1AD16DB100FF6445 /* NSDate+RoundToTime.m in Sources */,
 				A3BF72E11AD173DB00FF6445 /* _WorkTime.swift in Sources */,
 				A335080F1ACFB8CA00B2212A /* AppDelegate.swift in Sources */,
 				A3B1463D1ACFD22200BAD8F0 /* FTWorkTimesViewController.swift in Sources */,
 				A3BF72E41AD17AD900FF6445 /* NSDate+DayToTime.swift in Sources */,
+				A375538F1AF64B6700BE4A92 /* FTIntrosCompleteViewController.swift in Sources */,
+				A398131C1AEE064800348E7A /* FTIntrosInputInitialDataViewController.swift in Sources */,
 				A3B146371ACFC8A100BAD8F0 /* FTDashboardsViewController.swift in Sources */,
 				A3B1463A1ACFC90600BAD8F0 /* FTTopNavigationController.swift in Sources */,
 			);
@@ -613,7 +645,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TimeSheet/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Classes/TimeSheet-Bridging-Header.h";
@@ -629,7 +661,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TimeSheet/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Classes/TimeSheet-Bridging-Header.h";

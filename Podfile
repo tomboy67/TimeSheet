@@ -8,7 +8,6 @@ target 'TimeSheet' do
   pod 'BlocksKit'
   pod 'MagicalRecord'
   pod 'Timepiece'
-  pod 'Surfboard'
 end
 
 target 'TimeSheetTests' do

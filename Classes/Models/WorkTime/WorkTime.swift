@@ -9,16 +9,16 @@ class WorkTime: _WorkTime {
     
     class func findOrCreateByTargetDate(targetDate: NSDate, context: NSManagedObjectContext) -> WorkTime {
         let predicate : NSPredicate? = NSPredicate(format: "(targetDate >= %@ ) and (targetDate < %@)", targetDate.beginningOfDay, targetDate.endOfDay)
-        var workTime : WorkTime! = WorkTime.MR_findFirstWithPredicate(predicate, inContext: context) as WorkTime!
+        var workTime = WorkTime.MR_findFirstWithPredicate(predicate, inContext: context) as! WorkTime!
         if (workTime == nil) {
-            workTime = WorkTime.MR_createInContext(context) as WorkTime
+            workTime = WorkTime.MR_createInContext(context) as! WorkTime
         }
         workTime.targetDate = targetDate
         
         return workTime
     }
     
-    func totalTimeHuman() -> NSString? {
+    func totalTimeHuman() -> String? {
         if (self.isAllInputed()) {
             return self.endTime?.timeIntervalSinceDateHuman(self.startTime!)
         } else {
@@ -26,7 +26,7 @@ class WorkTime: _WorkTime {
         }
     }
     
-    func overTimeHuman() -> NSString? {
+    func overTimeHuman() -> String? {
         if (self.isAllInputed()) {
             let regularTime : NSDate = self.targetDate!.change(year: nil, month: nil, day: nil, hour: 18, minute: 0, second: 0)
             return self.endTime!.timeIntervalSinceDateHuman(regularTime)
