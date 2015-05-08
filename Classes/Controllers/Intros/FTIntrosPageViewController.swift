@@ -9,7 +9,21 @@
 import UIKit
 
 class FTIntrosPageViewController: UIPageViewController, UIPageViewControllerDelegate {
-
+    
+    // MARK: - Variables
+    
+    var _modelController : FTIntrosModelViewController? = nil
+    
+    /// データモデルを返すクラスを返す
+    var modelController : FTIntrosModelViewController {
+        if _modelController == nil {
+            _modelController = FTIntrosModelViewController()
+        }
+        return _modelController!
+    }
+    
+    // MARK: - View Life Cycles
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,14 +38,5 @@ class FTIntrosPageViewController: UIPageViewController, UIPageViewControllerDele
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-    var _modelController : FTIntrosModelViewController? = nil
     
-    /// データモデルを返すクラスを返す
-    var modelController : FTIntrosModelViewController {
-        if _modelController == nil {
-            _modelController = FTIntrosModelViewController()
-        }
-        return _modelController!
-    }
 }

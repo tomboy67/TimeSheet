@@ -10,9 +10,13 @@ import UIKit
 
 class FTIntrosPageDataViewController: UIViewController, UIGestureRecognizerDelegate {
     
+    // MARK: - Variables
+    
     var pageIndex : Int = NSNotFound
     var user : User? = nil
 
+    // MARK: - View Life Cycles
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

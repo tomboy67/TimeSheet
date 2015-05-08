@@ -9,11 +9,25 @@
 import UIKit
 
 class FTIntrosModelViewController: NSObject, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+    
+    // MARK: - Variables
+
+    /// 表示するページのストーリーボードID
     let pageIdentifiers : Array<String> = [
         "FTIntrosWelcomeViewController",
         "FTIntrosInputInitialDataViewController",
         "FTIntrosCompleteViewController"
     ]
+    
+    var _user : User? = nil
+    
+    /// データモデルを返すクラスを返す
+    var user : User {
+        if _user == nil {
+            _user = User.MR_createEntity() as! User?
+        }
+        return _user!
+    }
 
     // MARK: - Page View Controller Data Source
     
@@ -40,10 +54,27 @@ class FTIntrosModelViewController: NSObject, UIPageViewControllerDataSource, UIP
         return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
     }
     
+    // MARK: - Helper Methods
+    
+    /**
+    指定されたView Controllerのインデックスを返す
+    
+    :param: viewController ページのインデックスを求めるView Controller
+    
+    :returns: ページのインデックス
+    */
     func indexOfViewController(viewController: FTIntrosPageDataViewController) -> Int {
         return viewController.pageIndex
     }
     
+    /**
+    指定されたインデックスからView Controllerを返す
+    
+    :param: index      インデックス
+    :param: storyboard ストーリーボード
+    
+    :returns: View Controller
+    */
     func viewControllerAtIndex(index: Int, storyboard: UIStoryboard) -> FTIntrosPageDataViewController? {
         if (self.pageIdentifiers.count == 0) || (index >= self.pageIdentifiers.count) {
             return nil
@@ -53,15 +84,5 @@ class FTIntrosModelViewController: NSObject, UIPageViewControllerDataSource, UIP
         dataViewController.user = self.user
         
         return dataViewController
-    }
-    
-    var _user : User? = nil
-    
-    /// データモデルを返すクラスを返す
-    var user : User {
-        if _user == nil {
-            _user = User.MR_createEntity() as! User?
-        }
-        return _user!
     }
 }

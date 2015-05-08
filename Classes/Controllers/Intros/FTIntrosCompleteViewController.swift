@@ -13,6 +13,8 @@ class FTIntrosCompleteViewController: FTIntrosPageDataViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var statusImage: UIImageView!
     
+    // MARK: - View Life Cycles
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,6 +37,11 @@ class FTIntrosCompleteViewController: FTIntrosPageDataViewController {
         super.didReceiveMemoryWarning()
     }
     
+    // MARK: - Helper Methods
+    
+    /**
+    エラーメッセージを表示する
+    */
     func showNameEmptyMessages() {
         self.statusImage.image = UIImage(named: "x-mark")
         self.descriptionLabel.text = "名前が未入力です"
@@ -43,7 +50,7 @@ class FTIntrosCompleteViewController: FTIntrosPageDataViewController {
     }
     
     /**
-    完了画面を表示する
+    完了メッセージを表示する
     */
     func showCompleteMessages() {
         self.statusImage.image = UIImage(named: "complete")
@@ -52,6 +59,15 @@ class FTIntrosCompleteViewController: FTIntrosPageDataViewController {
         self.completeButton.hidden = false
     }
     
+    
+    // MARK: - IBActions
+    
+    /**
+    完了ボタンを押下した際に呼び出される
+    データを保存して、ダッシュボード画面へ遷移する
+    
+    :param: sender <#sender description#>
+    */
     @IBAction func onClickComplete(sender: AnyObject) {
         NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreWithCompletion { (result, error) -> Void in
             let storyboard : UIStoryboard! =  UIStoryboard(name: "Dashboards", bundle: nil)

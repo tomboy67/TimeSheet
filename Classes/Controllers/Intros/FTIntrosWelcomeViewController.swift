@@ -9,8 +9,11 @@
 import UIKit
 
 class FTIntrosWelcomeViewController: FTIntrosPageDataViewController {
+    
     @IBOutlet weak var descriptionLabel: UILabel!
 
+    // MARK: - View Life Cycles
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
