@@ -388,14 +388,14 @@
                                 <exclude reference="whu-fe-ss3"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="GtB-Ch-r87"/>
-                                <exclude reference="tZU-OR-1CK"/>
+                                <exclude reference="wIe-tE-hSM"/>
+                                <exclude reference="cCK-bA-xTX"/>
                                 <exclude reference="GjW-aj-DBQ"/>
                                 <exclude reference="V2x-jA-qU8"/>
                                 <exclude reference="Xsv-Ka-lzq"/>
                                 <exclude reference="nMJ-vU-dYm"/>
-                                <exclude reference="cCK-bA-xTX"/>
-                                <exclude reference="wIe-tE-hSM"/>
+                                <exclude reference="GtB-Ch-r87"/>
+                                <exclude reference="tZU-OR-1CK"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -405,14 +405,14 @@
                                 <include reference="whu-fe-ss3"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="GtB-Ch-r87"/>
-                                <include reference="tZU-OR-1CK"/>
+                                <include reference="wIe-tE-hSM"/>
+                                <include reference="cCK-bA-xTX"/>
                                 <include reference="GjW-aj-DBQ"/>
                                 <include reference="V2x-jA-qU8"/>
                                 <include reference="Xsv-Ka-lzq"/>
                                 <include reference="nMJ-vU-dYm"/>
-                                <include reference="cCK-bA-xTX"/>
-                                <include reference="wIe-tE-hSM"/>
+                                <include reference="GtB-Ch-r87"/>
+                                <include reference="tZU-OR-1CK"/>
                             </mask>
                         </variation>
                     </view>
@@ -428,7 +428,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="1280" height="960"/>
+        <image name="background" width="425" height="320"/>
         <image name="complete" width="128" height="128"/>
         <image name="sheet" width="128" height="128"/>
     </resources>
