@@ -20,6 +20,7 @@
 		A398131C1AEE064800348E7A /* FTIntrosInputInitialDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A398131B1AEE064800348E7A /* FTIntrosInputInitialDataViewController.swift */; };
 		A39813201AEE13C800348E7A /* _User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A398131E1AEE13C800348E7A /* _User.swift */; };
 		A39813211AEE13C800348E7A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A398131F1AEE13C800348E7A /* User.swift */; };
+		A3A9E7831AFCD087001A9C78 /* Intros.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3A9E7821AFCD087001A9C78 /* Intros.storyboard */; };
 		A3B146351ACFC74200BAD8F0 /* Dashboards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3B146341ACFC74200BAD8F0 /* Dashboards.storyboard */; };
 		A3B146371ACFC8A100BAD8F0 /* FTDashboardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B146361ACFC8A100BAD8F0 /* FTDashboardsViewController.swift */; };
 		A3B1463A1ACFC90600BAD8F0 /* FTTopNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B146391ACFC90600BAD8F0 /* FTTopNavigationController.swift */; };
@@ -29,7 +30,6 @@
 		A3BF72E11AD173DB00FF6445 /* _WorkTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BF72DF1AD173DB00FF6445 /* _WorkTime.swift */; };
 		A3BF72E21AD173DB00FF6445 /* WorkTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BF72E01AD173DB00FF6445 /* WorkTime.swift */; };
 		A3BF72E41AD17AD900FF6445 /* NSDate+DayToTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BF72E31AD17AD900FF6445 /* NSDate+DayToTime.swift */; };
-		A3DD03041AE36A7000935E4F /* Intros.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3DD03031AE36A7000935E4F /* Intros.storyboard */; };
 		A3DD03061AE36D0500935E4F /* FTIntrosPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DD03051AE36D0500935E4F /* FTIntrosPageViewController.swift */; };
 		A3DD03081AE36D9800935E4F /* FTIntrosModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DD03071AE36D9800935E4F /* FTIntrosModelViewController.swift */; };
 		D0E551CEEB2AA771A7C6D628 /* Pods_TimeSheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56FA27DE0B586F4FF68F11C6 /* Pods_TimeSheet.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -66,6 +66,7 @@
 		A398131B1AEE064800348E7A /* FTIntrosInputInitialDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTIntrosInputInitialDataViewController.swift; sourceTree = "<group>"; };
 		A398131E1AEE13C800348E7A /* _User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _User.swift; sourceTree = "<group>"; };
 		A398131F1AEE13C800348E7A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A3A9E7821AFCD087001A9C78 /* Intros.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Intros.storyboard; path = Classes/Views/Intros/Intros.storyboard; sourceTree = SOURCE_ROOT; };
 		A3AF5D1B1AD10BDC0052EDE7 /* TimeSheet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimeSheet-Bridging-Header.h"; sourceTree = "<group>"; };
 		A3B146341ACFC74200BAD8F0 /* Dashboards.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Dashboards.storyboard; path = Views/Dashboards/Dashboards.storyboard; sourceTree = "<group>"; };
 		A3B146361ACFC8A100BAD8F0 /* FTDashboardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTDashboardsViewController.swift; sourceTree = "<group>"; };
@@ -77,7 +78,6 @@
 		A3BF72DF1AD173DB00FF6445 /* _WorkTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _WorkTime.swift; sourceTree = "<group>"; };
 		A3BF72E01AD173DB00FF6445 /* WorkTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkTime.swift; sourceTree = "<group>"; };
 		A3BF72E31AD17AD900FF6445 /* NSDate+DayToTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+DayToTime.swift"; sourceTree = "<group>"; };
-		A3DD03031AE36A7000935E4F /* Intros.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Intros.storyboard; sourceTree = SOURCE_ROOT; };
 		A3DD03051AE36D0500935E4F /* FTIntrosPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTIntrosPageViewController.swift; sourceTree = "<group>"; };
 		A3DD03071AE36D9800935E4F /* FTIntrosModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTIntrosModelViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,15 +182,6 @@
 			path = Intros;
 			sourceTree = "<group>";
 		};
-		A37B5C561AD57C0F00A49CB8 /* Intro */ = {
-			isa = PBXGroup;
-			children = (
-				A3DD03031AE36A7000935E4F /* Intros.storyboard */,
-			);
-			name = Intro;
-			path = Views/Intros;
-			sourceTree = "<group>";
-		};
 		A37B5C5B1AD5814E00A49CB8 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +232,15 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		A3A9E7811AFCD041001A9C78 /* Intros */ = {
+			isa = PBXGroup;
+			children = (
+				A3A9E7821AFCD087001A9C78 /* Intros.storyboard */,
+			);
+			name = Intros;
+			path = Views/Intros;
+			sourceTree = "<group>";
+		};
 		A3B1462C1ACFC6EC00BAD8F0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,7 +276,7 @@
 		A3B146321ACFC72E00BAD8F0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A37B5C561AD57C0F00A49CB8 /* Intro */,
+				A3A9E7811AFCD041001A9C78 /* Intros */,
 				A3B1463E1ACFD7D300BAD8F0 /* WorkTimes */,
 				A3B146331ACFC73400BAD8F0 /* Dashboards */,
 			);
@@ -442,7 +442,7 @@
 				A3B146351ACFC74200BAD8F0 /* Dashboards.storyboard in Resources */,
 				A33508191ACFB8CB00B2212A /* Images.xcassets in Resources */,
 				A37B5C5F1AD581F800A49CB8 /* panels.json in Resources */,
-				A3DD03041AE36A7000935E4F /* Intros.storyboard in Resources */,
+				A3A9E7831AFCD087001A9C78 /* Intros.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
