@@ -24,17 +24,14 @@ class FTIntrosPageViewController: UIPageViewController, UIPageViewControllerDele
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
 
-    var _modelController: FTIntrosModelViewController? = nil
+    var _modelController : FTIntrosModelViewController? = nil
     
     /// データモデルを返すクラスを返す
-    var modelController: FTIntrosModelViewController {
+    var modelController : FTIntrosModelViewController {
         if _modelController == nil {
             _modelController = FTIntrosModelViewController()
         }
         return _modelController!
     }
-
-
 }

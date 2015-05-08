@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FTIntrosModelViewController: NSObject, UIPageViewControllerDataSource {
+class FTIntrosModelViewController: NSObject, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     let pageIdentifiers : Array<String> = [
         "FTIntrosWelcomeViewController",
         "FTIntrosInputInitialDataViewController",
@@ -50,6 +50,18 @@ class FTIntrosModelViewController: NSObject, UIPageViewControllerDataSource {
         }
         
         let dataViewController = storyboard.instantiateViewControllerWithIdentifier(self.pageIdentifiers[index]) as! FTIntrosPageDataViewController
+        dataViewController.user = self.user
+        
         return dataViewController
+    }
+    
+    var _user : User? = nil
+    
+    /// データモデルを返すクラスを返す
+    var user : User {
+        if _user == nil {
+            _user = User.MR_createEntity() as! User?
+        }
+        return _user!
     }
 }

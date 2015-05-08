@@ -17,22 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        MagicalRecord.setupCoreDataStackWithAutoMigratingSqliteStoreNamed("TimeSheet.sqlite")
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        let isFirst : Bool = true
         
-        var storyboardName : String = "Intros";
-//        if isFirst {
-//            storyboardName = "Intros"
-//        } else {
-//            storyboardName = "Dashboards"
-//        }
-        
+        let user = User.MR_findFirst() as! User?
+        var storyboardName : String!
+        if user != nil {
+            storyboardName = "Dashboards"
+        } else {
+            storyboardName = "Intros"
+        }
         let storyboard : UIStoryboard = UIStoryboard(name: storyboardName, bundle: nil)
         let initialViewControler = storyboard.instantiateInitialViewController() as! UIViewController
+        
         self.window?.rootViewController = initialViewControler
         self.window?.makeKeyAndVisible()
-        
-        MagicalRecord.setupCoreDataStackWithAutoMigratingSqliteStoreNamed("TimeSheet.sqlite")
         
         return true
     }

@@ -8,9 +8,10 @@
 
 import UIKit
 
-class FTIntrosPageDataViewController: UIViewController {
+class FTIntrosPageDataViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var pageIndex : Int = NSNotFound
+    var user : User? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()

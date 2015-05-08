@@ -23,10 +23,15 @@ class FTIntrosInputInitialDataViewController: FTIntrosPageDataViewController, UI
         super.didReceiveMemoryWarning()
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        let user = User.MR_createEntity() as! User
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        let str = textField.text as NSString
+        let inputedStr = str.stringByReplacingCharactersInRange(range, withString: string)
         
-        user.name = self.nameTextField.text
-        return true
+        if count(inputedStr) > 10 {
+            return false
+        } else {
+            self.user!.name = inputedStr
+            return true
+        }
     }
 }
