@@ -23,7 +23,7 @@ class FTDashboardsViewController: UIViewController {
     @IBOutlet weak var endTimeButton: DKCircleButton!
     @IBOutlet weak var workTimesContainerView: UIView!
     
-    var delegate:FTWorkTimeUpdatedDelegate?
+    var delegate : FTWorkTimeUpdatedDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()

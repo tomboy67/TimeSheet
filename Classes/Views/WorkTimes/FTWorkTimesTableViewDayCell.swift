@@ -17,12 +17,30 @@ class FTWorkTimesTableViewDayCell: UITableViewCell {
     @IBOutlet weak var totalTimeLabel: UILabel!
     @IBOutlet weak var overtimeLabel: UILabel!
     
+    var date : NSDate!
+    var workTime : WorkTime?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    override func drawRect(rect: CGRect) {
+        super.drawRect(rect)
+        
+        self.startTimeLabel.text = self.workTime?.startTime?.timeHuman()
+        self.endTimeLabel.text = self.workTime?.endTime?.timeHuman()
+        self.dayLabel.text = String(format: "%02d日", date.day)
+        self.wdayLabel.text = "\(self.date.week().name())"
+        
+        self.totalTimeLabel.text = workTime?.totalTimeHuman()
+        self.overtimeLabel.text = workTime?.overTimeHuman()
+        
+        self.dayLabel.textColor = self.date.week().color()
+        self.wdayLabel.textColor = self.date.week().color()
     }
 
 }

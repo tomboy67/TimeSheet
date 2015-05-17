@@ -10,7 +10,7 @@ import UIKit
 import Timepiece
 
 
-class FTWorkTimesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FTWorkTimeUpdatedDelegate {
+class FTWorkTimesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FTWorkTimeUpdatedDelegate, FTWorkTimesForm {
     
     var targetDate: NSDate!
     var currentCalendar: NSCalendar!
@@ -52,10 +52,9 @@ class FTWorkTimesViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! FTWorkTimesTableViewDayCell;
-        
-        self.cellConfigure(cell, indexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! FTWorkTimesTableViewDayCell
 
+        self.cellConfigure(cell, indexPath: indexPath)
         
         return cell;
     }
@@ -68,16 +67,10 @@ class FTWorkTimesViewController: UIViewController, UITableViewDataSource, UITabl
         let predicate : NSPredicate? = NSPredicate(format: "(targetDate >= %@ ) and (targetDate < %@)", date.beginningOfDay, date.endOfDay)
         let workTime : WorkTime? = WorkTime.MR_findFirstWithPredicate(predicate) as! WorkTime?
         
-        cell.startTimeLabel.text = workTime?.startTime?.timeHuman()
-        cell.endTimeLabel.text = workTime?.endTime?.timeHuman()
-        cell.dayLabel.text = String(format: "%02d日", date.day)
-        cell.wdayLabel.text = "\(date.week().name())"
-
-        cell.totalTimeLabel.text = workTime?.totalTimeHuman()
-        cell.overtimeLabel.text = workTime?.overTimeHuman()
+        cell.date = date
+        cell.workTime = workTime
         
-        cell.dayLabel.textColor = date.week().color()
-        cell.wdayLabel.textColor = date.week().color()
+        cell.setNeedsDisplay()
     }
     
     func convertFromIndexPath(indexPath: NSIndexPath) -> NSDate {
@@ -106,5 +99,20 @@ class FTWorkTimesViewController: UIViewController, UITableViewDataSource, UITabl
         self.tableView.beginUpdates()
         self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
         self.tableView.endUpdates()
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let date : NSDate = self.convertFromIndexPath(indexPath)
+        
+        let storyboard : UIStoryboard = UIStoryboard(name: "WorkTimes", bundle: nil)
+        let workTimesFormViewCtl = storyboard.instantiateInitialViewController() as! FTWorkTimesFormViewController
+        workTimesFormViewCtl.delegate = self
+        workTimesFormViewCtl.targetDate = date
+        
+        self.navigationController?.pushViewController(workTimesFormViewCtl, animated: true)        
+    }
+    
+    func updatedWorkTime(targetDate: NSDate, workTime: WorkTime) {
+        self.updateTableViewFromDate(targetDate)
     }
 }

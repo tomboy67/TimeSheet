@@ -12,6 +12,8 @@
 		A33508191ACFB8CB00B2212A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A33508181ACFB8CB00B2212A /* Images.xcassets */; };
 		A335081C1ACFB8CB00B2212A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A335081A1ACFB8CB00B2212A /* LaunchScreen.xib */; };
 		A33508281ACFB8CB00B2212A /* TimeSheetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33508271ACFB8CB00B2212A /* TimeSheetTests.swift */; };
+		A33BD0A41B073D2100579EFB /* WorkTimes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33BD0A31B073D2100579EFB /* WorkTimes.storyboard */; };
+		A33BD0A61B073D5900579EFB /* FTWorkTimesFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33BD0A51B073D5900579EFB /* FTWorkTimesFormViewController.swift */; };
 		A375538F1AF64B6700BE4A92 /* FTIntrosCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A375538E1AF64B6700BE4A92 /* FTIntrosCompleteViewController.swift */; };
 		A37553911AF6523300BE4A92 /* media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A37553901AF6523300BE4A92 /* media.xcassets */; };
 		A37B5C5F1AD581F800A49CB8 /* panels.json in Resources */ = {isa = PBXBuildFile; fileRef = A37B5C5E1AD581F800A49CB8 /* panels.json */; };
@@ -58,6 +60,8 @@
 		A33508211ACFB8CB00B2212A /* TimeSheetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeSheetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33508261ACFB8CB00B2212A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A33508271ACFB8CB00B2212A /* TimeSheetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSheetTests.swift; sourceTree = "<group>"; };
+		A33BD0A31B073D2100579EFB /* WorkTimes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WorkTimes.storyboard; sourceTree = "<group>"; };
+		A33BD0A51B073D5900579EFB /* FTWorkTimesFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTWorkTimesFormViewController.swift; sourceTree = "<group>"; };
 		A375538E1AF64B6700BE4A92 /* FTIntrosCompleteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTIntrosCompleteViewController.swift; sourceTree = "<group>"; };
 		A37553901AF6523300BE4A92 /* media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = media.xcassets; sourceTree = "<group>"; };
 		A37B5C5E1AD581F800A49CB8 /* panels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = panels.json; sourceTree = "<group>"; };
@@ -303,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				A3B1463C1ACFD22200BAD8F0 /* FTWorkTimesViewController.swift */,
+				A33BD0A51B073D5900579EFB /* FTWorkTimesFormViewController.swift */,
 			);
 			path = WorkTimes;
 			sourceTree = "<group>";
@@ -311,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				A3B1463F1ACFD88600BAD8F0 /* FTWorkTimesTableViewDayCell.swift */,
+				A33BD0A31B073D2100579EFB /* WorkTimes.storyboard */,
 			);
 			name = WorkTimes;
 			path = Views/WorkTimes;
@@ -443,6 +449,7 @@
 				A33508191ACFB8CB00B2212A /* Images.xcassets in Resources */,
 				A37B5C5F1AD581F800A49CB8 /* panels.json in Resources */,
 				A3A9E7831AFCD087001A9C78 /* Intros.storyboard in Resources */,
+				A33BD0A41B073D2100579EFB /* WorkTimes.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +519,7 @@
 				A33508121ACFB8CA00B2212A /* TimeSheet.xcdatamodeld in Sources */,
 				A398131A1AEDF1CF00348E7A /* FTIntrosWelcomeViewController.swift in Sources */,
 				A39813181AEDEBC900348E7A /* FTIntrosPageDataViewController.swift in Sources */,
+				A33BD0A61B073D5900579EFB /* FTWorkTimesFormViewController.swift in Sources */,
 				A39813201AEE13C800348E7A /* _User.swift in Sources */,
 				A3BF72E21AD173DB00FF6445 /* WorkTime.swift in Sources */,
 				A3DD03081AE36D9800935E4F /* FTIntrosModelViewController.swift in Sources */,
