@@ -96,6 +96,7 @@ class FTWorkTimesViewController: UIViewController, UITableViewDataSource, UITabl
     func updateTableViewFromDate(date: NSDate) {
         let indexPath : NSIndexPath = NSIndexPath(forRow: date.day - 1, inSection: 0)
         
+        self.tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Top, animated: true)
         self.tableView.beginUpdates()
         self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
         self.tableView.endUpdates()
