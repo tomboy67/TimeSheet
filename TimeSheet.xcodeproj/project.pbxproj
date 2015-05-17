@@ -82,6 +82,7 @@
 		A3BF72DF1AD173DB00FF6445 /* _WorkTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _WorkTime.swift; sourceTree = "<group>"; };
 		A3BF72E01AD173DB00FF6445 /* WorkTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkTime.swift; sourceTree = "<group>"; };
 		A3BF72E31AD17AD900FF6445 /* NSDate+DayToTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+DayToTime.swift"; sourceTree = "<group>"; };
+		A3D39ACF1B085D27006E5EF4 /* UIColor_FlatColors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIColor_FlatColors.framework; path = "Pods/../build/Debug-iphoneos/Pods-TimeSheet/UIColor_FlatColors.framework"; sourceTree = "<group>"; };
 		A3DD03051AE36D0500935E4F /* FTIntrosPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTIntrosPageViewController.swift; sourceTree = "<group>"; };
 		A3DD03071AE36D9800935E4F /* FTIntrosModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTIntrosModelViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -353,6 +354,7 @@
 		CF3CA25673706E846E63C569 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A3D39ACF1B085D27006E5EF4 /* UIColor_FlatColors.framework */,
 				56FA27DE0B586F4FF68F11C6 /* Pods_TimeSheet.framework */,
 			);
 			name = Frameworks;
@@ -652,6 +654,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods-TimeSheet",
+				);
 				INFOPLIST_FILE = TimeSheet/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -668,6 +674,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods-TimeSheet",
+				);
 				INFOPLIST_FILE = TimeSheet/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

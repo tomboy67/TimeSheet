@@ -7,29 +7,33 @@
 //
 
 import UIKit
+import UIColor_FlatColors
 
 class FTTopNavigationController: UINavigationController {
 
+    var bottomBorderLayer : CALayer = CALayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        bottomBorderLayer.backgroundColor = UIColor.flatSunFlowerColor().CGColor
+        self.navigationBar.layer.addSublayer(bottomBorderLayer)
+        self.updateBottomBorderInNavigationBar()
+        
+        self.navigationBar.tintColor = UIColor.flatSunFlowerColor()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        self.updateBottomBorderInNavigationBar()
     }
-    */
+
+    func updateBottomBorderInNavigationBar() {
+        bottomBorderLayer.frame = CGRectMake(0.0, self.navigationBar.frame.size.height, self.navigationBar.frame.size.width, 1.0)
+    }
 
 }

@@ -9,6 +9,8 @@ target 'TimeSheet' do
   pod 'MagicalRecord'
   pod 'Timepiece'
   pod 'XLForm'
+  pod 'UIColor+FlatColors'
+  pod 'PureLayout'
 end
 
 target 'TimeSheetTests' do

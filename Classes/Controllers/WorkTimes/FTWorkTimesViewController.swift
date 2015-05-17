@@ -109,7 +109,8 @@ class FTWorkTimesViewController: UIViewController, UITableViewDataSource, UITabl
         workTimesFormViewCtl.delegate = self
         workTimesFormViewCtl.targetDate = date
         
-        self.navigationController?.pushViewController(workTimesFormViewCtl, animated: true)        
+        self.navigationController?.pushViewController(workTimesFormViewCtl, animated: true)
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
     
     func updatedWorkTime(targetDate: NSDate, workTime: WorkTime) {
