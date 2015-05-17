@@ -7,6 +7,20 @@ class WorkTime: _WorkTime {
         identifier = NSUUID().UUIDString
     }
     
+    override func willSave() {
+        super.willSave()
+        
+        self.setPrimitiveValue(self.startTime?.change(year: self.targetDate?.year, month: self.targetDate?.month, day: self.targetDate?.day, hour: nil, minute: nil, second: nil), forKey: "startTime")
+        self.setPrimitiveValue(self.endTime?.change(year: self.targetDate?.year, month: self.targetDate?.month, day: self.targetDate?.day, hour: nil, minute: nil, second: nil), forKey: "endTime")
+    }
+    
+    class func findByTargetDate(targetDate: NSDate, context: NSManagedObjectContext) -> WorkTime? {
+        let predicate : NSPredicate? = NSPredicate(format: "(targetDate >= %@ ) and (targetDate < %@)", targetDate.beginningOfDay, targetDate.endOfDay)
+        let workTime = WorkTime.MR_findFirstWithPredicate(predicate, inContext: context) as! WorkTime?
+        
+        return workTime
+    }
+    
     class func findOrCreateByTargetDate(targetDate: NSDate, context: NSManagedObjectContext) -> WorkTime {
         let predicate : NSPredicate? = NSPredicate(format: "(targetDate >= %@ ) and (targetDate < %@)", targetDate.beginningOfDay, targetDate.endOfDay)
         var workTime = WorkTime.MR_findFirstWithPredicate(predicate, inContext: context) as! WorkTime!
