@@ -18,7 +18,9 @@ PODS:
   - MagicalRecord (2.2):
     - MagicalRecord/Core (= 2.2)
   - MagicalRecord/Core (2.2)
+  - PureLayout (2.0.6)
   - Timepiece (0.2.0)
+  - UIColor+FlatColors (0.0.2)
   - XLForm (2.2.0)
 
 DEPENDENCIES:
@@ -26,7 +28,9 @@ DEPENDENCIES:
   - DKCircleButton (from `https://github.com/tomomura/DKCircleButton.git`, branch
     `use-storyboard`)
   - MagicalRecord
+  - PureLayout
   - Timepiece
+  - UIColor+FlatColors
   - XLForm
 
 EXTERNAL SOURCES:
@@ -43,7 +47,9 @@ SPEC CHECKSUMS:
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   DKCircleButton: 62564c9debae08ad77dabb8d9658dfeb5520f2c4
   MagicalRecord: f8a56bb87ab6552f20c4bb8681a1958a197ea3cd
+  PureLayout: f25f0bb904d5ccfe6e31da3cb869185259f02e0d
   Timepiece: 0977b56f172f492b026bed7e686edd0c5573d72a
+  UIColor+FlatColors: 6c699df7a575281794c688c64cee6c44fd1f93b4
   XLForm: 799e61ef230f519914e722bf032b19a597223c19
 
 COCOAPODS: 0.36.3

@@ -23,9 +23,9 @@ extension NSDate {
         
         func color() -> UIColor {
             switch self {
-            case .Sunday: return UIColor.redColor()
-            case .Saturday: return UIColor.blueColor()
-            default: return UIColor.blackColor()
+            case .Sunday: return UIColor.flatAlizarinColor()
+            case .Saturday: return UIColor.flatPeterRiverColor()
+            default: return UIColor.flatCloudsColor()
             }
         }
     }

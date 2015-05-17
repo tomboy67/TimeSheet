@@ -37,9 +37,10 @@ class FTWorkTimesFormViewController: XLFormViewController, XLFormDescriptorDeleg
     // MARK: View Life Cycles
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         self.workTime = WorkTime.findByTargetDate(self.targetDate, context: NSManagedObjectContext.MR_defaultContext())
         self.initializeForm()
-        super.viewDidLoad()
     }
 
     override func didReceiveMemoryWarning() {
@@ -141,6 +142,7 @@ class FTWorkTimesFormViewController: XLFormViewController, XLFormDescriptorDeleg
         let formatter = NSDateFormatter()
         formatter.dateStyle = NSDateFormatterStyle.MediumStyle
         formatter.timeStyle = NSDateFormatterStyle.NoStyle
+        self.title = formatter.stringFromDate(self.targetDate)
         form = XLFormDescriptor(title: formatter.stringFromDate(self.targetDate)) as XLFormDescriptor
         
         self.setFormForStartTime(form)
